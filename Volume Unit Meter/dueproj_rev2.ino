@@ -84,15 +84,8 @@ void loop(){
   }
 
   /**************** SAMPLE ADC ****************/
-  if (dataCount < 0){
+  if ((dataCount < 0) && (clockCount == 17)){
     dataCount = 7;
-    //a[0]=78;   // a[0] (analog pin 0) = sub bass filter.
-    //a[1]=153;   // a[1] (analog pin 1) = bass filter.
-    //a[2]=216;   // a[2] (analog pin 2) = lower midrange filter.
-    //a[3]=305;   // a[3] (analog pin 3) = midrange filter.
-    //a[4]=431;   // a[4] (analog pin 4) = upper midrange filter.
-    //a[5]=609;   // a[5] (analog pin 5) = presence filter.
-    //a[6]=860;   // a[6] (analog pin 6) = brilliance filter.
     a[0]=ADC->ADC_CDR[7];   // a[0] (analog pin 0) = sub bass filter.
     a[1]=ADC->ADC_CDR[6];   // a[1] (analog pin 1) = bass filter.
     a[2]=ADC->ADC_CDR[5];   // a[2] (analog pin 2) = lower midrange filter.
